@@ -1,3 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Movies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+        }
+
+        .movie-container {
+            margin: 20px auto;
+            padding: 10px;
+            padding-bottom:30px;
+            background-color:#333333;
+            border-radius: 5px;
+            color:#ccc;
+            text-align:center;
+            width: 50%;
+            min-width:229px
+        }
+
+        h2 {
+            margin-bottom: 5px;
+            color:#ffffff
+        }
+
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
 <?php
 
 class Movie {
@@ -15,15 +51,15 @@ class Movie {
         $this->genres = $genres;
     }
 
-    // public function getTitle() {
+    public function getTitle() {
 
-    //     return $this->title;
-    // }
+        return $this->title;
+    }
 
-    // public function setTitle($title) {
+    public function setTitle($title) {
 
-    //     $this->title = $title;
-    // }
+        $this->title = $title;
+    }
 
     public function getGenres() {
 
@@ -39,26 +75,26 @@ class Movie {
 $genres1 = ["Crime", "Comedy"];
 $genres2 = ["Action", "Drama"];
 
-$movie1 = new Movie("Snatch", "Guy Ritchie", "English", $genres1);
-$movie2 = new Movie("RRR", "S. S. Rajamouli", "Telugu", $genres2);
+$movies = [
+    new Movie("Snatch", "Guy Ritchie", "English", $genres1),
+    new Movie("RRR", "S. S. Rajamouli", "Telugu", $genres2)
+];
 
-var_dump($movie1);
-echo "<br><br>";
-var_dump($movie1->title);
-echo "<br>";
-var_dump($movie1->director);
-echo "<br>";
-var_dump($movie1->language);
-echo "<br>";
-var_dump($movie1->getGenres());
-echo "<br>-----------------<br>";
-var_dump($movie2);
-echo "<br><br>";
-var_dump($movie2->title);
-echo "<br>";
-var_dump($movie2->director);
-echo "<br>";
-var_dump($movie2->language);
-echo "<br>";
-var_dump($movie2->getGenres());
+foreach ($movies as $movie) {
+    ?>
+
+    <div class="movie-container">
+        <div class="movie-details">
+            <h2><?php echo $movie->getTitle(); ?></h2>
+            <p><strong>Director:</strong> <?php echo $movie->director; ?></p>
+            <p><strong>Language:</strong> <?php echo $movie->language; ?></p>
+            <p><strong>Genres:</strong> <?php echo implode(', ', $movie->getGenres()); ?></p>
+        </div>
+    </div>
+
+    <?php
+}
 ?>
+
+</body>
+</html>
