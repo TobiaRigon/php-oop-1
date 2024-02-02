@@ -1,0 +1,26 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.movie-container {
+    margin: 20px auto;
+    padding: 10px;
+    padding-bottom:30px;
+    background-color:#333333;
+    border-radius: 5px;
+    color:#ccc;
+    text-align:center;
+    width: 50%;
+    min-width:229px
+}
+
+h2 {
+    margin-bottom: 5px;
+    color:#ffffff
+}
+
+p {
+    margin: 5px 0;
+}
+  
