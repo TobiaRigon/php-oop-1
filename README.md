@@ -1,12 +1,16 @@
-## Repository: php-todo-list
+## Repository: php-oop-1
 
-This repository contains a PHP project focusing on creating a todo list application.
+This repository contains a PHP project focusing on revising basic concepts of classes, instance variables, and methods.
 
 ### Contents:
 
-- **Database**: MySQL database setup for storing todo items.
-- **Model**: PHP classes representing todo items and interacting with the database.
-- **Views**: PHP files for rendering the user interface of the todo list application.
-- **Controller**: PHP scripts handling user requests, managing data flow, and rendering views.
-- **CSS**: Stylesheets for styling the todo list interface.
-- **Scripts**: Additional PHP scripts for utility purposes, such as database setup or data manipulation.
+- **Class Definition**: Definition of a `Movie` class.
+- **Instance Variables**: Declaration of instance variables within the `Movie` class.
+- **Constructor**: Definition of a constructor method within the `Movie` class.
+- **Methods**: Definition of at least one method within the `Movie` class.
+- **Object Instantiation**: Instantiation of at least two `Movie` objects and printing of their respective properties.
+
+### Bonus Content:
+
+- **Multiple Genres**: Modification of the `Movie` class to accept more than one genre.
+- **Complete Layout**: Creation of a complete layout for displaying a list of movies, organized efficiently into dedicated files and folders.
